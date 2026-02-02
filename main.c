@@ -8,6 +8,7 @@ int main(int argc, const char * argv[]) {
       //  printf("Usage: %s id1 name1 id2 name2 ...\n", argv[0]);
         return 1;
     }
+    
 
     StudentPtr head = NULL, temp = NULL, newNode = NULL;
     int i;
