@@ -66,34 +66,73 @@ int main(int argc, const char * argv[]) {
         2. Add value (2)
         
 */
+   
     typedef struct node* NodePtr;
-    NodePtr tmp=head; //add temp value to faciliate
+    NodePtr tmp=head;
+    printf("Print using loop\n"); //add temp value to faciliate
         
-    /*  Exercise III Use loop to print everything
+    // Exercise III Use loop to print everything
         int i,n=5;
         for(i=0;i<n;i++){
-            printf("%3d", tmp->value);
+            printf("%3d\n", tmp->value);
+            tmp=tmp->next;
           // What is missing???
         }
-    */
     
-   /*  Exercise IV change to while loop!! (you can use NULL to help)
-       
-         while(){
+    
+   //Exercise IV change to while loop!! (you can use NULL to help)
+       tmp=head;
+         while(tmp!=NULL/*or tmp*/){
             printf("%3d", tmp->value);
+            tmp=tmp->next;
            // What is missing???
         }
-    */
+        printf("\n");
+    
     
  /*  Exercise V Use malloc to create all nodes, instead of create a struct!!
          //use a loop to help
-          
      */
+    printf("Create by malloc\n");
+    
+        NodePtr temp;
+        head=(NodePtr)malloc(sizeof(struct node));
+        temp=head;
+        n=10;
+        for(i=0;i<n;i++){
+            temp->value=7+i*2;
+            temp->next=(NodePtr) malloc(sizeof(struct node));
+            temp=temp->next;
+        }
+        temp->value=7+i*2;
+        temp->next=NULL;
+        
+        temp=head;
+        while(temp){
+            printf("%3d",temp->value);
+            temp=temp->next;
+        }
 
+
+        
+
+         while(temp!=NULL/*or tmp*/){
+            printf("%3d", temp->value);
+            temp=temp->next;
+           // What is missing???
+        }
+        printf("\n");
     /*  Exercise VI Free all node !!
          //use a loop to help
-          
      */
+     temp=head;
+     NodePtr next;
+     while(temp !=NULL){
+        next=temp->next;
+        free(temp);
+        temp=next;
+     }
+        
     
     return 0;
 }
