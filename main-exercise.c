@@ -4,11 +4,10 @@
 #include "std_node.h"
 
 int main(int argc, const char * argv[]) {
-    if (argc < 2) {
-      //  printf("Usage: %s id1 name1 id2 name2 ...\n", argv[0]);
-        return 0;
+    if (argc < 3) {
+        printf("Usage: %s id1 name1 id2 name2 ...\n", argv[0]);
+        return 1;
     }
-    
 
     StudentPtr head = NULL, temp = NULL, newNode = NULL;
     int i;
@@ -31,7 +30,7 @@ int main(int argc, const char * argv[]) {
     printf("Student List:\n");
     temp = head;
     while (temp != NULL) {
-        printf("%d %s\n", temp->id, temp->name);
+        printf("ID: %d, Name: %s\n", temp->id, temp->name);
         temp = temp->next;
     }
 
