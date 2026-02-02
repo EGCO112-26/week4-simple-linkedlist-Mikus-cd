@@ -19,13 +19,49 @@ int main(int argc, const char * argv[]) {
 
     printf("%d\n", head ->value ); //what value for 5
     printf("%d\n", head ->next->value ); //what value for 8
-/*  Exercise I
+    printf("\n");
+    struct node d;
+    b.next =&d;
+    d.value=11; //b.next->value=11;
+    //(*&d).value=11;
+    //a.->next->next->value=11;
+    //head->next->next->value=11;
+    d.next=NULL;//Nullptr;
+    /*  Exercise I
     1. Add 1 more than at the end
     2. Add value(11)
-    3. Make next become NULL
- */
+    3. Make next become NULL*/
+
+    printf("%d\n", head->value ); //what value for 5
+    printf("%d\n", head->next->value ); //what value for 8
+    printf("%d\n",head->next->next->value);//what value for 11
+
+    printf("Insert form front\n");
+
+    struct node e;
+    e.value=2;
+    e.next=&a;
+    head=&e;
+    printf("%d\n", head->value ); //what value for 5
+    printf("%d\n", head->next->value ); //what value for 8
+    printf("%d\n", head->next->next->value);//what value for 11
+    printf("%d\n", head->next->next->next->value);//what value for 11
+    printf("Insert form middle\n");
+    struct node f;
+    f.value=7;
+    f.next=&b;
+    a.next=&f;
+    printf("%d\n", head->value ); //what value for 5
+    printf("%d\n", head->next->value ); //what value for 8
+    printf("%d\n", head->next->next->value);//what value for 11
+    printf("%d\n", head->next->next->next->value);//what value for 11
+    printf("%d\n", head->next->next->next->next->value);//what value for 11
+
+
     
-/*  Exercise II
+    
+    
+    ;/*  Exercise II
         1. Add 1 more than at the begining!!!!
         2. Add value (2)
         
