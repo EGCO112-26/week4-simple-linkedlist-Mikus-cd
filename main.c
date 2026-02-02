@@ -4,7 +4,7 @@
 #include "std_node.h"
 
 int main(int argc, const char * argv[]) {
-    if (argc < 3) {
+    if (argc < 2) {
         printf("Usage: %s id1 name1 id2 name2 ...\n", argv[0]);
         return 1;
     }
