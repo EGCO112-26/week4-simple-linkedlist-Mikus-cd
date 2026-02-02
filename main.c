@@ -30,7 +30,7 @@ int main(int argc, const char * argv[]) {
     printf("Student List:\n");
     temp = head;
     while (temp != NULL) {
-        printf("ID: %d, Name: %s\n", temp->id, temp->name);
+        printf("ID: %d Name: %s\n", temp->id, temp->name);
         temp = temp->next;
     }
 
