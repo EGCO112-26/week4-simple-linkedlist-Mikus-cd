@@ -5,7 +5,7 @@
 
 int main(int argc, const char * argv[]) {
     if (argc < 2) {
-        printf("Usage: %s id1 name1 id2 name2 ...\n", argv[0]);
+      //  printf("Usage: %s id1 name1 id2 name2 ...\n", argv[0]);
         return 1;
     }
 
